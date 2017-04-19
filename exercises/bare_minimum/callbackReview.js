@@ -2,6 +2,13 @@
  * Implement these functions following the node style callback pattern
  */
 
+  /*
+=======================================================
+Useful links for fs.read:
+http://stackoverflow.com/questions/10058814/get-data-from-fs-readfile
+=======================================================
+*/
+
 var fs = require('fs');
 var request = require('request');
 
@@ -18,6 +25,12 @@ var pluckFirstLineFromFile = function(filePath, cb) {
 };
 
 // This function should retrieve the status code of a GET request to `url`
+/*
+=======================================================
+Checkout request for below request.get implementaiotn
+https://www.npmjs.com/package/request
+=======================================================
+*/
 var getStatusCode = function(url, cb) {
   request.get(url, function(error, response, body) {
     if (error) {
